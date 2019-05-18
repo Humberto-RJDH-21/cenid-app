@@ -1,0 +1,24 @@
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <div fxFlex.gt-sm="33" fxFlex.gt-xs="50" fxFlex="100">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>      
+      <mat-card-content>
+        <!-- MANAGEMENT -->
+        <mat-chip-list>
+            <span fxFlex></span>
+        <mat-chip color="primary" (click)="goToManagement()">Managament</mat-chip>
+        <span fxFlex></span>
+      </mat-chip-list>
+      </mat-card-content>
+      <mat-card-actions>
+        <span fxFlex></span>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

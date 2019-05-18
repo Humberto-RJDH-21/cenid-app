@@ -1,0 +1,117 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> New Semester </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form [formGroup]="form">
+      <!-- Semester -->
+      <div class="mb-1">
+        <mat-form-field style="width: 100%">
+          <input matInput placeholder="Semester" formControlName="dsSemester">
+        </mat-form-field>
+        <small *ngIf="form.controls['dsSemester'].hasError('required') && form.controls['dsSemester'].touched"
+          class="mat-text-warn">You must include a semester.</small>
+      </div>
+      <!-- Date Start -->
+      <div class="mb-1">
+        <mat-form-field style="width: 100%">
+          <input matInput placeholder="Date Start" formControlName="dateStart" type="date">
+        </mat-form-field>
+        <small *ngIf="form.controls['dateStart'].hasError('required') && form.controls['dateStart'].touched"
+          class="mat-text-warn">You must include a start date.</small>
+        <small *ngIf="form.controls['dateStart'].errors?.date && form.controls['dateStart'].touched"
+          class="mat-text-warn">You must include a valid date.</small>
+      </div>
+      <!-- Date Finished -->
+      <div class="mb-1">
+        <mat-form-field style="width: 100%">
+          <input matInput placeholder="Date Finish" formControlName="dateFinish" type="date">
+        </mat-form-field>
+        <small *ngIf="form.controls['dateFinish'].errors?.date && form.controls['dateFinish'].touched"
+          class="mat-text-warn">You must include a valid date.</small>
+      </div>
+      <!-- Active -->
+      <div class="mb-1">
+        <mat-label>
+          Active ?
+        </mat-label>
+        <br>
+        <mat-radio-group [formControl]="form.controls['swActive']">
+          <mat-radio-button value="true">Yes</mat-radio-button>
+          <mat-radio-button value="false">No</mat-radio-button>
+        </mat-radio-group>
+        <small *ngIf="!form.controls['swActive'].valid && form.controls['swActive'].touched" class="mat-text-warn">
+          You must select one
+        </small>
+      </div>
+      <hr>
+      <!-- Submit -->
+      <mat-card-actions>
+        <span fxFlex></span>
+        <button mat-raised-button class="mr-5" color="primary" type="submit">Submit</button>
+      </mat-card-actions>
+    </form>
+  </mat-expansion-panel>
+</mat-accordion>
+
+
+<div class="mb-1 mat-elevation-z8">
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+    <table mat-table [dataSource]="dataSource" matSort style="width:100%;">
+
+      <!-- Semester Column -->
+      <ng-container matColumnDef="dsSemester" sticky>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Semester </th>
+        <td mat-cell *matCellDef="let element"> {{element.dsSemester}} </td>
+      </ng-container>
+
+      <!-- Date Started Column -->
+      <ng-container matColumnDef="dateStart">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Started </th>
+        <td mat-cell *matCellDef="let element"> {{element.dateStart}} </td>
+      </ng-container>
+
+
+      <!-- Date Finished Column -->
+      <ng-container matColumnDef="dateFinish">
+        <th mat-header-cell *matHeaderCellDef> Date Finished </th>
+        <td mat-cell *matCellDef="let element"> {{element.dateFinish}} </td>
+      </ng-container>
+
+      <!-- Status Column -->
+      <ng-container matColumnDef="swActive">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+        <td mat-cell *matCellDef="let element">
+          <span *ngIf="element.swActive" class="label label-success">Current</span>
+          <span  *ngIf="!element.swActive" class="label label-warning">Inactive</span>
+        </td>
+      </ng-container>
+
+      <!-- Star Column -->
+      <ng-container matColumnDef="star" stickyEnd>
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>edit</mat-icon>
+              <span>Edit</span>
+            </button>
+            <div mat-menu-item>
+              <mat-slide-toggle>Activate</mat-slide-toggle>
+            </div>
+          </mat-menu>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </mat-card-content>
+
+</div>

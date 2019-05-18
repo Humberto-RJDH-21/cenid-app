@@ -1,0 +1,54 @@
+<!-- ============================================================== -->
+<!-- sidebar -->
+<!-- ============================================================== -->
+<!-- <div class="user-profile" style="background: url(assets/images/background/user-bg.png) no-repeat;">
+    <div class="profile-img"> <img src="assets/images/users/user.png" alt="user"> </div>
+    <div class="profile-text"><a> Brieden Coy Marriot</a></div>
+</div> -->
+<!-- <mat-list>
+    <mat-list-item *ngFor="let message of messages">
+      <mat-icon matListIcon>folder</mat-icon>
+      <h3 matLine> {{message.from}} </h3>
+      <p matLine>
+        <span> {{message.subject}} </span>
+        <span class="demo-2"> -- {{message.content}} </span>
+      </p>
+    </mat-list-item>
+  </mat-list> -->
+<!-- <mat-nav-list appAccordion>
+    <mat-list-item appAccordionLink *ngFor="let menuitem of menuItems.getMenuitem()" routerLinkActive="selected"
+        group="{{menuitem.state}}"> -->
+<!--         <a class="" appAccordionToggle [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'">
+            <mat-icon>{{ menuitem.icon }}</mat-icon>
+            <span>{{ menuitem.name }}</span>
+            <span fxFlex></span>
+            <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
+        </a> -->
+<!-- <a appAccordionToggle *ngIf="menuitem.type === 'sub'">
+            <mat-icon>{{ menuitem.icon }}</mat-icon>
+            <span>{{ menuitem.name}}</span>
+            <span fxFlex></span>
+            <span class="menu-badge mat-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
+            <mat-icon class="menu-caret">arrow_drop_down</mat-icon>
+        </a>
+        <mat-nav-list class="sub-menu" *ngIf="menuitem.type === 'sub'">
+            <mat-list-item *ngFor="let childitem of menuitem.children" routerLinkActive="open">
+                <a [routerLink]="['/', menuitem.state, childitem.state ]" class="relative">{{ childitem.name
+                    }}
+                </a>
+            </mat-list-item>
+        </mat-nav-list> -->
+
+    <mat-nav-list>
+        <app-item-nav *ngFor="let item of menuItems.getMenu()" [item]="item" [depth]="initDepth"></app-item-nav>
+    </mat-nav-list>
+
+<!-- <mat-nav-list>
+    <app-item-nav *ngFor="let item of menuItems.getMenu()" [item]="item" [depth]="0">
+    </app-item-nav>
+</mat-nav-list> -->
+
+
+
+
+<!-- </mat-nav-list> -->

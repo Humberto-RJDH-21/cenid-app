@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+  <mat-card-title>Management</mat-card-title>
+</mat-card-header>
+  <mat-card-content >
+    <mat-card >
+      <nav mat-tab-nav-bar>
+          <a mat-tab-link
+             *ngFor="let tab of tabs"
+             [routerLink]="tab.route"
+             routerLinkActive #rla="routerLinkActive"
+             [active]="rla.isActive">
+            {{tab.label}}
+          </a>
+        </nav>
+        <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+</mat-card>

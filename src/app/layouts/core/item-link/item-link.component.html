@@ -1,0 +1,7 @@
+<mat-list-item (click)="onItemSelected(item)"
+  [ngClass]="{'active': item.route ? router.isActive(item.route, true): false, 'expanded': expanded}">
+  <a class="">
+    <mat-icon>{{item.icon}}</mat-icon>
+    <span>{{item.name}}</span>
+  </a>
+</mat-list-item>
