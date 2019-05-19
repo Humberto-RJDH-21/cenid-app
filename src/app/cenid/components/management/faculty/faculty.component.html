@@ -6,7 +6,7 @@
     <form [formGroup]="form">
       <!-- Semester -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="Faculty" formControlName="dsFaculty">
         </mat-form-field>
         <small *ngIf="form.controls['dsFaculty'].hasError('required') && form.controls['dsFaculty'].touched"

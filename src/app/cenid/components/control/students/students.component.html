@@ -7,7 +7,7 @@
       <mat-card-content>
         <!-- Matrícula -->
         <div class="mb-1">
-          <mat-form-field style="width: 100%">
+          <mat-form-field>
             <input matInput placeholder="Student Code" formControlName="matricula">
           </mat-form-field>
           <small *ngIf="form.controls['matricula'].hasError('required') && form.controls['matricula'].touched"
@@ -18,9 +18,8 @@
             class="mat-text-warn">Matrícula cannot exceed 10 characters.</small>
         </div>
         <!-- First Name -->
-        <div class="mb-1">
-  
-          <mat-form-field style="width: 100%">
+        <div class="mb-1">  
+          <mat-form-field>
             <input matInput placeholder="First name" [formControl]="form.controls['fname']">
           </mat-form-field>
           <small *ngIf="form.controls['fname'].hasError('required') && form.controls['fname'].touched"
@@ -32,7 +31,7 @@
         </div>
         <!-- Sur Name -->
         <div class="mb-1">
-          <mat-form-field style="width: 100%">
+          <mat-form-field>
             <input matInput placeholder="Sur name" [formControl]="form.controls['sname']">
           </mat-form-field>
           <small *ngIf="form.controls['sname'].hasError('required') && form.controls['sname'].touched"
@@ -44,7 +43,7 @@
         </div>
         <!-- Last Name -->
         <div class="mb-1">
-          <mat-form-field style="width: 100%">
+          <mat-form-field>
             <input matInput placeholder="Last name" [formControl]="form.controls['lname']">
           </mat-form-field>
           <small *ngIf="form.controls['lname'].hasError('required') && form.controls['lname'].touched"
@@ -68,7 +67,7 @@
         </div>
         <!-- Cd Faculty -->
         <div class="mb-1">
-            <mat-form-field style="width: 100%">
+            <mat-form-field>
                 <mat-label>Faculty</mat-label>
           <mat-select [(value)]="selected">
             <mat-option value="Info">
@@ -85,7 +84,7 @@
         </div>
         <!-- Email -->
         <div class="mb-1">
-          <mat-form-field style="width: 100%">
+          <mat-form-field>
             <input matInput placeholder="Email address" [formControl]="form.controls['email']" type="email">
           </mat-form-field>
           <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched"
@@ -111,7 +110,7 @@
         <!-- R Complete -->
         <div class="mb-1">
           <br>
-          <mat-form-field style="width: 100%">
+          <mat-form-field>
             <input matInput placeholder="rComplete" [formControl]="form.controls['rcomplete']" type="number">
           </mat-form-field>
           <mat-slider style="width: 100%" (change)="form.controls.rcomplete.setValue(slider2.value)" #slider2 [max]="max"
@@ -123,7 +122,7 @@
         </div>
         <!-- Entrypoint -->
         <div class="mb-1">
-          <mat-form-field style="width: 100%">
+          <mat-form-field>
             <input matInput placeholder="Entrypoint" [formControl]="form.controls['entrypoint']" type="date">
           </mat-form-field>
           <small *ngIf="form.controls['entrypoint'].hasError('required') && form.controls['entrypoint'].touched"

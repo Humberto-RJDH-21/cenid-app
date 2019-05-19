@@ -6,7 +6,7 @@
     <form [formGroup]="form">
       <!-- Semester -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="Semester" formControlName="dsSemester">
         </mat-form-field>
         <small *ngIf="form.controls['dsSemester'].hasError('required') && form.controls['dsSemester'].touched"
@@ -14,7 +14,7 @@
       </div>
       <!-- Date Start -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="Date Start" formControlName="dateStart" type="date">
         </mat-form-field>
         <small *ngIf="form.controls['dateStart'].hasError('required') && form.controls['dateStart'].touched"
@@ -24,7 +24,7 @@
       </div>
       <!-- Date Finished -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="Date Finish" formControlName="dateFinish" type="date">
         </mat-form-field>
         <small *ngIf="form.controls['dateFinish'].errors?.date && form.controls['dateFinish'].touched"

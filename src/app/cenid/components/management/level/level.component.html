@@ -5,14 +5,14 @@
       </mat-expansion-panel-header>
       <form [formGroup]="form">      
         <div class="mb-1">
-          <mat-form-field style="width: 100%">
+          <mat-form-field>
             <input matInput placeholder="Level Name" formControlName="dsLevel">
           </mat-form-field>
           <small *ngIf="form.controls['dsLevel'].hasError('required') && form.controls['dsLevel'].touched"
             class="mat-text-warn">You must include a level name.</small>
         </div>
         <div class="mb-1">
-            <mat-form-field style="width: 100%">
+            <mat-form-field>
               <input matInput placeholder="Level Description" formControlName="nameLevel">
             </mat-form-field>            
           </div>          

@@ -5,7 +5,7 @@
     </mat-expansion-panel-header>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">      
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="Class Hour Name" formControlName="dsClass">
         </mat-form-field>
         <small *ngIf="form.controls['dsClass'].hasError('required') && form.controls['dsClass'].touched"
