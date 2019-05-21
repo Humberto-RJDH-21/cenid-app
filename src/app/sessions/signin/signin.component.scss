@@ -1,3 +1,42 @@
-.mat-card{    
-    width: 35%;
-}
+ $gutter: 1rem !default;
+ .session {
+    position: relative;
+    z-index: 4000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    //@include flex-direction(column);
+  }
+  
+  .session-content {
+    padding: 40px $gutter;
+    //@include flexbox;
+    display: flex;
+    //@include align-items(center);    
+    align-items: center;
+    //@include justify-content(center);
+    justify-content: center;
+    //@include flex(1 0 auto);
+    
+    //@include flex-direction(column);
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .session-wrapper {
+    //@include flex(none); 
+    max-width: 400px;
+    width: 100%;
+    //margin: 0 auto;
+  }
+  .mat-drawer-content{
+    overflow: unset;
+}  
+ 
+#cover-sign-in{    
+    background-size: cover;    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    }

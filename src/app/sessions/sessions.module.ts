@@ -9,6 +9,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewUserComponent } from './users/new-user/new-user.component';
 import { UserComponent } from './users/user/user.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AuthService } from '../shared/services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedService } from '../shared/services/shared.service';
 
 @NgModule({
   declarations: [NotFoundComponent, SigninComponent, NewUserComponent, UserComponent],
@@ -18,7 +21,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     ReactiveFormsModule,
     MatModuleModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
+  ],
+  providers: [
+    AuthService
   ]
 })
 export class SessionsModule { }
