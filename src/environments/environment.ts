@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  gateWayUrl: 'http://localhost:8585',
+  dummySession : true
 };
 
 /*
