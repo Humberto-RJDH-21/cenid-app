@@ -19,6 +19,7 @@ import { ItemNavComponent } from './layouts/core/item-nav/item-nav.component';
 import { SessionsModule } from './sessions/sessions.module';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import { AuthService } from './shared/services/auth.service';
 
 registerLocaleData(localeEs, 'es');
 
@@ -48,6 +49,7 @@ registerLocaleData(localeEs, 'es');
   entryComponents: [
   ],
   providers: [
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
