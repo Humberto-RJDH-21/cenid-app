@@ -36,7 +36,7 @@ export class Semesters {
     this.semester = defaultSemester;
   }
 
-  getSemesters(): Semester[] {
+  getData(): Semester[] {
     return this.semester;
   }
 
