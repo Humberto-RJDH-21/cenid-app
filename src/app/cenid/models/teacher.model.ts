@@ -38,7 +38,7 @@ export const data = [{
         {
             cdEmergencyContact: 1,
             teacher: 1,
-            name: 'admin',
+            name: 'admin emergency contact',
             phone: '9512546630',
             mail: 'humberto.rjdh@gmail.com',
             dsFax: null
@@ -59,19 +59,6 @@ export const teacherForm = {
     cdUsuario: 1,
     swActive: true,
     emergencyContact: formEmergencyContact
-    /*     matricula: [null, Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10)])],
-        fname: [null, Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(10)])],
-        sname: [null, Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(10)])],
-        lname: [null, Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(10)])],
-        gender: [null, Validators.required],
-        email: [null, Validators.compose([Validators.required, CustomValidators.email])],
-        entrypoint: [null, Validators.compose([Validators.required, CustomValidators.date])],
-        rcomplete: [null, Validators.compose([Validators.required, CustomValidators.range([0, 1000])])],
-        swUser: [null, Validators.required],
-        comments: [null, Validators.compose([Validators.maxLength(500)])],
-        swActive: [null, Validators.required],
-        cdGroup: [null, Validators.required],
-        cdFaculty: [null, Validators.required] */
 };
 
 

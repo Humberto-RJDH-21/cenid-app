@@ -22,10 +22,9 @@ export class SemesterComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.semesters = new Semesters();
-    this.displayedColumns = ['dsSemester', 'dateStart', 'dateFinish', 'swActive', 'star'];
-    /* this.dataSource=this.semesters.semester; */
+    this.displayedColumns = ['dsSemester', 'dateStart', 'dateFinish', 'swActive', 'star'];    
     this.form = this.fb.group(this.semesters.getForm());
-    this.dataSource = new MatTableDataSource(this.semesters.semester);
+    this.dataSource = new MatTableDataSource(this.semesters.getData());
   }
 
 
@@ -33,6 +32,7 @@ export class SemesterComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
+  
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
