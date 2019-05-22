@@ -1,15 +1,27 @@
-<div class="main-container">
-  <mat-toolbar color="primary" class="topbar float-right">
-    <span fxFlex></span>  
-    <app-blank-toolbar></app-blank-toolbar>
-  </mat-toolbar>
-  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">     
-      <mat-sidenav-content class="page-wrapper">
-          <div class="page-content">
-              <router-outlet>
-                  <app-spinner></app-spinner>
-              </router-outlet>
-          </div>
-      </mat-sidenav-content>
-  </mat-sidenav-container>
+<div class="main-container ">
+    <!-- <mat-toolbar color="primary" class="topbar float-right">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <span fxShow="false" fxShow.gt-xs>
+                    <img src="assets/images/CENID-logo.png" alt="homepage" class="dark-logo">
+                    <img src="assets/images/CENID-logo.png" class="light-logo" style="height:80px" alt="homepage">
+                </span>
+            </a>
+        </div>
+        <span fxFlex></span>
+        <app-blank-toolbar></app-blank-toolbar>
+    </mat-toolbar> -->
+    <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+        <mat-sidenav-content class="page-wrapper-s">
+            <div class="page-content">
+                <router-outlet>
+                        <!-- <img src="/assets/images/background/cenid_front.jpg" id="cover-sign-in"> -->
+                     <!-- <img src="/assets/images/background/wallhaven-169313.png" id="cover-sign-in"> -->
+                    <!--  <img src="/assets/images/background/wallhaven-297508.jpg" id="cover-sign-in">  -->
+                     <!-- <img src="/assets/images/background/wallhaven-670339.png" id="cover-sign-in">  -->
+                     <!-- <app-spinner></app-spinner> -->
+                </router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
 </div>
