@@ -1,0 +1,69 @@
+$gutter: 1rem !default;
+
+.session {
+    position      : relative;
+    z-index       : 4000;
+    min-height    : 100vh;
+    display       : flex;
+    flex-direction: column;
+    //@include flex-direction(column);
+}
+
+.session-content {
+    padding: 40px $gutter;
+    //@include flexbox;
+    display: flex;
+    //@include align-items(center);    
+    align-items: center;
+    //@include justify-content(center);
+    justify-content: center;
+    //@include flex(1 0 auto);
+
+    //@include flex-direction(column);
+    flex-direction: column;
+    min-height    : 100vh;
+}
+
+.session-wrapper {
+    //@include flex(none); 
+    max-width: 800px;
+    width    : 100%;
+
+    //margin: 0 auto;
+}
+
+.mat-drawer-content {
+    overflow: unset;
+}
+
+#cover-sign-in {
+    background-size: cover;
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    width          : 100%;
+}
+
+
+
+.mat-card {
+    background-color:rgba(255, 255, 255,0.3) !important;
+}
+
+.text-error {
+    color      : #7bc4ed;
+    text-shadow: rgb(179, 229, 252) 5px 1px, rgb(78, 183, 235) 10px 3px;
+    font-size  : 210px;
+    line-height: 150px;    
+}
+
+.text-error-subtitle {
+    color      : #7bc4ed;
+    font-size  : 90px;
+    line-height: 90px;    
+
+}
+
+.h1{
+    opacity:1;
+}
