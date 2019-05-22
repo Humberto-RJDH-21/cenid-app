@@ -27,6 +27,7 @@ import { ControlComponent } from './components/control/control/control.component
 import { TeachersComponent } from './components/control/teachers/teachers.component';
 import { StudentsComponent } from './components/control/students/students.component';
 import { PersonalComponent } from './components/control/personal/personal.component';
+import { TableComponent } from './components/control/teachers/table/table.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { PersonalComponent } from './components/control/personal/personal.compon
         ControlComponent,
         TeachersComponent,
         StudentsComponent,
-        PersonalComponent
+        PersonalComponent,
+        TableComponent
         ],
 
   imports: [

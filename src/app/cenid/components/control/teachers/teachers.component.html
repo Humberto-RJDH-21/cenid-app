@@ -4,41 +4,66 @@
       <mat-panel-title> New Teacher </mat-panel-title>
     </mat-expansion-panel-header>
     <form [formGroup]="form">
-      <!-- First Name -->
-      <div class="mb-1">
-        <mat-form-field style="width: 100%">
-          <input matInput placeholder="First name" formControlName="dsFirstName">
-        </mat-form-field>
-        <small *ngIf="form.controls['dsFirstName'].hasError('required') && form.controls['dsFirstName'].touched"
-          class="mat-text-warn">You must include a first name.</small>
-        <small *ngIf="form.controls['dsFirstName'].hasError('maxlength') && form.controls['dsFirstName'].touched"
-          class="mat-text-warn">Your first name cannot exceed 50 characters.</small>
-      </div>
-      <!-- Sur Name -->
-      <div class="mb-1">
-        <mat-form-field style="width: 100%">
-          <input matInput placeholder="Sur name" formControlName="dsSurNames">
-        </mat-form-field>
-        <small *ngIf="form.controls['dsSurNames'].hasError('required') && form.controls['dsSurNames'].touched"
-          class="mat-text-warn">You must include a sur name.</small>
-        <small *ngIf="form.controls['dsSurNames'].hasError('maxlength') && form.controls['dsSurNames'].touched"
-          class="mat-text-warn">Your sur name cannot exceed 50 characters.</small>
-      </div>
-       <!-- Gender -->
-       <div class="mb-1">
-          <label>Gender</label>
-          <br>
-          <mat-radio-group formControlName="gender">
-            <mat-radio-button value="male">Male</mat-radio-button>
-            <mat-radio-button value="female" class="ml-3">Female</mat-radio-button>
-          </mat-radio-group>
-          <small *ngIf="!form.controls['gender'].valid && form.controls['gender'].touched" class="mat-text-warn">You
-            must
-            select a gender.</small>
+      <div fxLayout="row">
+        <div fxFlex="70">
+          <!-- First Name -->
+          <div class="mb-1">
+            <mat-form-field>
+              <input matInput placeholder="First name" formControlName="dsFirstName">
+            </mat-form-field>
+            <small *ngIf="form.controls['dsFirstName'].hasError('required') && form.controls['dsFirstName'].touched"
+              class="mat-text-warn">You must include a first name.</small>
+            <small *ngIf="form.controls['dsFirstName'].hasError('maxlength') && form.controls['dsFirstName'].touched"
+              class="mat-text-warn">Your first name cannot exceed 50 characters.</small>
+          </div>
+          <!-- Sur Name -->
+          <div class="mb-1">
+            <mat-form-field>
+              <input matInput placeholder="Sur name" formControlName="dsSurNames">
+            </mat-form-field>
+            <small *ngIf="form.controls['dsSurNames'].hasError('required') && form.controls['dsSurNames'].touched"
+              class="mat-text-warn">You must include a sur name.</small>
+            <small *ngIf="form.controls['dsSurNames'].hasError('maxlength') && form.controls['dsSurNames'].touched"
+              class="mat-text-warn">Your sur name cannot exceed 50 characters.</small>
+          </div>
+          <!-- Last Name -->
+          <div class="mb-1">
+            <mat-form-field>
+              <input matInput placeholder="Last name" formControlName="dsSurNames">
+            </mat-form-field>
+            <small *ngIf="form.controls['dsSurNames'].hasError('required') && form.controls['dsSurNames'].touched"
+              class="mat-text-warn">You must include a sur name.</small>
+            <small *ngIf="form.controls['dsSurNames'].hasError('maxlength') && form.controls['dsSurNames'].touched"
+              class="mat-text-warn">Your sur name cannot exceed 50 characters.</small>
+          </div>
+          <!-- Gender -->
+          <div class="mb-1">
+            <label>Gender</label>
+            <br>
+            <mat-radio-group formControlName="gender">
+              <mat-radio-button value="male">Male</mat-radio-button>
+              <mat-radio-button value="female" class="ml-3">Female</mat-radio-button>
+            </mat-radio-group>
+            <small *ngIf="!form.controls['gender'].valid && form.controls['gender'].touched" class="mat-text-warn">You
+              must
+              select a gender.</small>
+          </div>
         </div>
+        <div fxFlex="30">
+          <mat-card>    
+            <img mat-card-image src="assets/images/users/av_02.svg" alt="Profile Photo">    
+            <mat-card-actions>              
+              <span fxFlex></span>
+              <button mat-raised-button  class="mr-auto ml-auto" color="primary" (click)="fileInput.click()">Upload Profile Image</button>
+              <input hidden type="file" #fileInput>
+              <span fxFlex></span>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
       <!-- Address MX -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="Address (MX)" formControlName="mxAddress">
         </mat-form-field>
         <small *ngIf="form.controls['mxAddress'].hasError('maxlength') && form.controls['mxAddress'].touched"
@@ -46,7 +71,7 @@
       </div>
       <!-- Address Home -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="Address (Home)" formControlName="homeAddress">
         </mat-form-field>
         <small *ngIf="form.controls['homeAddress'].hasError('maxlength') && form.controls['homeAddress'].touched"
@@ -54,7 +79,7 @@
       </div>
       <!-- mxPhone -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="Phone (MX)" formControlName="mxPhone">
         </mat-form-field>
         <small *ngIf="form.controls['mxPhone'].hasError('required') && form.controls['mxPhone'].touched"
@@ -64,7 +89,7 @@
       </div>
       <!-- Email  -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="Email address" formControlName="email" type="email">
         </mat-form-field>
         <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched"
@@ -74,7 +99,7 @@
       </div>
       <!-- unsisStartedAt -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="Unsis Started At" formControlName="unsisStartedAt" type="date">
         </mat-form-field>
         <small *ngIf="form.controls['unsisStartedAt'].hasError('required') && form.controls['unsisStartedAt'].touched"
@@ -84,7 +109,7 @@
       </div>
       <!-- unsisLeftAt -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="Unsis Left At" formControlName="unsisLeftAt" type="date">
         </mat-form-field>
         <small *ngIf="form.controls['unsisLeftAt'].errors?.date && form.controls['unsisLeftAt'].touched"
@@ -92,7 +117,7 @@
       </div>
       <!-- comments -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <textarea matInput placeholder="Comments" formControlName="comments"></textarea>
         </mat-form-field>
         <small *ngIf="form.controls['comments'].hasError('maxlength') && form.controls['comments'].touched"
@@ -115,7 +140,7 @@
       <hr>
       <!-- First Name -->
       <div class="mb-1">
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <input matInput placeholder="First name" formControlName="dsFirstName">
         </mat-form-field>
         <small *ngIf="form.controls['dsFirstName'].hasError('required') && form.controls['dsFirstName'].touched"
@@ -131,3 +156,4 @@
     </form>
   </mat-expansion-panel>
 </mat-accordion>
+<app-table></app-table>
