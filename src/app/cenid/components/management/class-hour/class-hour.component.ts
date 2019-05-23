@@ -53,7 +53,7 @@ export class ClassHourComponent implements OnInit {
     });
   }
 
-  public onSubmit(time) {
+  public onSubmit() {
     this.snackBar.open(`Saved time ${this.exportTime.hour}:${this.exportTime.minute} ${this.exportTime.meriden}`, null, {
       duration: 1000,
     });

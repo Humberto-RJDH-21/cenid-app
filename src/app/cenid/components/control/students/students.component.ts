@@ -11,6 +11,7 @@ import { Students } from 'src/app/cenid/models/student.model';
 export class StudentsComponent implements OnInit {
   autoTicks = false;
   disabled = false;
+  
   invert = false;
   max = 1000;
   min = 0;

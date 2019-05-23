@@ -69,7 +69,7 @@
         <div class="mb-1">
             <mat-form-field>
                 <mat-label>Faculty</mat-label>
-          <mat-select [(value)]="selected">
+          <mat-select >
             <mat-option value="Info">
               Info
             </mat-option>
@@ -113,10 +113,10 @@
           <mat-form-field>
             <input matInput placeholder="rComplete" [formControl]="form.controls['rcomplete']" type="number">
           </mat-form-field>
-          <mat-slider style="width: 100%" (change)="form.controls.rcomplete.setValue(slider2.value)" #slider2 [max]="max"
+          <!-- <mat-slider style="width: 100%" (change)="form.controls.rcomplete.setValue(slider2.value)" #slider2 [max]="max"
             [min]="min" [step]="step" [thumbLabel]="thumbLabel" [tickInterval]="tickInterval"
             [(value)]="form.controls['rcomplete'].value" color="accent">
-          </mat-slider>
+          </mat-slider> -->
           <small *ngIf="form.controls.rcomplete.errors?.range && form.controls.rcomplete.touched"
             class="mat-text-warn">Number should be between {{min}} and {{max}}.</small>
         </div>
