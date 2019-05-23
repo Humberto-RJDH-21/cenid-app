@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="c312d37ba76ac09543f3126e31b6299eb073ff1c" datatype="html">
+        <source>Sign in with your app id to continue.</source>
+        <target>Inicia sesión para continuar.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sessions/signin/signin.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5db300f6fba918a35597160183205ede13e8e149" datatype="html">
+        <source>Username is required.</source>
+        <target>Debes introducir un nombre de usuario.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sessions/signin/signin.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4eb39d69b74d7a56652ec84fa6826994ee26c0e5" datatype="html">
+        <source>Password is required.</source>
+        <target>Debes introducir una contraseña.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sessions/signin/signin.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+        <source>Login</source>
+        <target>Iniciar Sesión</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sessions/signin/signin.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3a8e04b34236be1cb450987973bcb7b33d483e35" datatype="html">
+        <source>Forgot password?</source>
+        <target>¿Olvidaste tu contraseña?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sessions/signin/signin.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
