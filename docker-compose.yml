@@ -1,0 +1,39 @@
+version: '3'
+services:
+  ceniddb:
+    container_name: cenid-db
+    image: unsis/cenid-bd:1.0
+    environment:
+      MYSQL_DATABASE: ceniddb
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: dbpassword
+    ports:
+      - "3304:3306"
+    restart: always    
+    networks:
+      - cenidnet      
+  cenidbackend:
+    container_name: cenid-backend
+    image: unsis/cenid-backend:1.0    
+    depends_on: 
+      - ceniddb
+    ports:
+      - "8585:8080"
+    networks: 
+      - cenidnet
+    restart: always    
+  cenidweb:    
+    container_name: cenid-frontend    
+    image: unsis/cenid-frontend:1.0    
+    depends_on: 
+      - cenidbackend
+    ports:
+      - "8080:8080"
+    networks: 
+      - cenidnet
+    restart: always
+networks: 
+  cenidnet: 
+ 
