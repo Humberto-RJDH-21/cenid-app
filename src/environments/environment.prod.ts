@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  gateWayUrl: 'http://cenidbackend:8080',
+  dummySession : false
 };
