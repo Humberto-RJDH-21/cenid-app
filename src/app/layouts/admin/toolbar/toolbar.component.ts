@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, LOCALE_ID } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,8 +7,12 @@ import { Router } from '@angular/router';
   styles: []
 })
 export class ToolbarComponent implements OnInit {
+  languageList = [
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Espanol' }
 
-  constructor(private router:Router) { }
+  ];
+  constructor(private router:Router,@Inject(LOCALE_ID) protected localeId: string) { }
 
   ngOnInit() {
   }

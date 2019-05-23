@@ -1,10 +1,24 @@
-
-<a href="#" class=" m-r-20 hidden-sm-up" mat-raised-button color="warn">
+<button [matMenuTriggerFor]="langs" mat-icon-button class="m-r-5">
+    <mat-icon>
+        language
+    </mat-icon>
+</button>
+<mat-menu #langs="matMenu" >
+    <ng-container *ngFor="let lang of languageList">
+    <a href="/{{lang.code}}/">
+        <button mat-menu-item>
+            <mat-icon>check-box</mat-icon> {{lang.label}}
+        </button>
+    </a>
+</ng-container>
+</mat-menu>
+<!-- <a href="#" class=" m-r-20 hidden-sm-up" mat-raised-button color="warn">
     <button mat-icon-button><mat-icon>notifications</mat-icon></button>
-</a>
+</a> -->
 
 <button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-5"> <img src="assets/images/users/user.png" alt="user"
-        class="profile-pic"> </button>
+        class="profile-pic">
+</button>
 <mat-menu #profile="matMenu" class="mymegamenu">
     <button mat-menu-item>
         <mat-icon>settings</mat-icon> Settings
@@ -12,9 +26,9 @@
     <button mat-menu-item>
         <mat-icon>account_box</mat-icon> Profile
     </button>
-    <button mat-menu-item>
+    <!-- <button mat-menu-item>
         <mat-icon>notifications_off</mat-icon> Disable notifications
-    </button>
+    </button> -->
     <button mat-menu-item (click)="logout()">
         <mat-icon>exit_to_app</mat-icon> Sign Out
     </button>
